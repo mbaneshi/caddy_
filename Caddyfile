@@ -1,0 +1,15 @@
+shahab.xyz {
+    reverse_proxy shahab:3000
+}
+
+haftkhanapi.shahab.xyz {
+    reverse_proxy haftkhan_backend:8000
+}
+
+haftkhanminiapp.shahab.xyz {
+    reverse_proxy haftkhan_frontend:3000
+}
+blog.shahab.xyz {
+    reverse_proxy blog:3000
+  }
+

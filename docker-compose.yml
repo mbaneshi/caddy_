@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  caddy:
+    image: caddy
+    container_name: caddy
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - internal_docker_net
+
+volumes:
+  caddy_data:
+  caddy_config:
+
+networks:
+  internal_docker_net:
+    external: true
+
